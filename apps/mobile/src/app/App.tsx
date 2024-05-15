@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 import { L10N, LocalizationProvider } from '@happynrwl/l10n';
+import { Numbric, NumeralProvider } from '@happynrwl/numbric';
+
 import en from "../assets/en.json"
 const langData = {
   en,
@@ -19,9 +21,12 @@ const langData = {
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
+  
+  // const number = numeral(1000)
 
   return (
     <LocalizationProvider localizationData={langData}>
+      <NumeralProvider>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView
         style={{
@@ -31,7 +36,11 @@ export const App = () => {
         <Text>
         <L10N l10nKey='hello'/>
         </Text>
+        <Text>
+          <Numbric value={100000000000}/>
+        </Text>
       </SafeAreaView>
+      </NumeralProvider>
     </LocalizationProvider>
   );
 };

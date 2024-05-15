@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@happynrwl/l10n": ["packages/shared/l10n/src/index.ts"],
+      "@happynrwl/numbric": ["packages/shared/numbric/src/index.ts"],
       "@happynrwl/reference": ["packages/shared/reference/src/index.ts"]
     }
   },

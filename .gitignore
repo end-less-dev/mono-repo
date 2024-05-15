@@ -111,3 +111,7 @@ yarn-error.log
 
 
 apps/mobile-e2e/artifacts
+
+# Next.js
+.next
+out

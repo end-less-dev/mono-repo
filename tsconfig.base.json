@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@happynrwl/l10n": ["packages/shared/l10n/src/index.ts"],
+      "@happynrwl/reference": ["packages/shared/reference/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

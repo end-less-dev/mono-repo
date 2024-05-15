@@ -1,0 +1,13 @@
+{
+    "login":"लॉग इन करें",
+    "households": "House Holds",
+    "mobileNumber":"मोबाइल नंबर",
+    "enter":"Enter",
+    "back":"Back",
+    "changeNumber":"Change Number",
+    "verify":"Verify",
+    "otp":"OTP",
+    "verifyOtpDescription":"Please enter the otp sent to your mobile number",
+    "resendOtp":"Didn't Receive OTP ?",
+    "resend":"Resend"
+}

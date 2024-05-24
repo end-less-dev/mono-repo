@@ -1,9 +1,9 @@
-import { Input } from "antd"
+import { Input, InputProps } from "antd"
 /* eslint-disable-next-line */
-export interface SanInputProps {}
+export interface SanInputProps extends InputProps{}
 
 export function SanInput(props: SanInputProps) {
-  return <Input variant="outlined"/>
+  return <Input variant="outlined" {...props}/>
 }
 
 export default SanInput;

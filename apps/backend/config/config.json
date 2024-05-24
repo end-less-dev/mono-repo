@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "default",
+    "password": "SXDOEgM2tL5u",
+    "database": "verceldb",
+    "host": "ep-winter-waterfall-a4p260dp-pooler.us-east-1.aws.neon.tech",
+    "dialect": "postgres",
+    "dialectOptions" : {
+      "ssl" : {
+        "required" : true
+      }
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

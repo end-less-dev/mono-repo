@@ -16,28 +16,17 @@ export function SanMessageCard({
   title,
   currentUser,
 }: SanMessageCardProps) {
-  return currentUser !== false ? (
-    <Card>
+  return (
+    <Card style={currentUser ? {backgroundColor : "lightblue"} : {backgroundColor:"transparent"}}>
       <Meta
         avatar={
-          <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
+          <Avatar src={avatar} />
         }
         title={title}
         description={description}
       />
     </Card>
-  ) : (
-    <Card>
-      <Row justify="space-between">
-        <Col>
-          <Meta title={title} description={description} />
-        </Col>
-        <Col>
-          <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
-        </Col>
-      </Row>
-    </Card>
-  );
+  )
 }
 
 export default SanMessageCard;

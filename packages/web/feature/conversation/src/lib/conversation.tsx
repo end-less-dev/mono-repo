@@ -6,8 +6,8 @@ export function Conversation(props: ConversationProps) {
   return (
     <div>
       <h1>Welcome to Conversation!</h1>
-      <SanMessageCard avatar="a" description="Hello suks...." title="Sanjay"/>
-      <SanMessageCard avatar="a" description="Hello san...." title="Sugi"/>
+      <SanMessageCard avatar="a" description="Hello suks...." title="Sanjay" currentUser={true}/>
+      <SanMessageCard avatar="a" description="Hello san...." title="Sugi" currentUser={true}/>
       <SanInput/>
     </div>
   );

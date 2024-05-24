@@ -1,5 +1,5 @@
 'use client';
-import { Card, Avatar } from 'antd';
+import { Card, Avatar, Row, Col } from 'antd';
 
 const { Meta } = Card;
 /* eslint-disable-next-line */
@@ -7,15 +7,16 @@ export interface SanMessageCardProps {
   avatar: string;
   title: string;
   description: string;
+  currentUser: boolean;
 }
 
 export function SanMessageCard({
   avatar,
   description,
   title,
+  currentUser,
 }: SanMessageCardProps) {
-  
-  return (
+  return currentUser !== false ? (
     <Card>
       <Meta
         avatar={
@@ -25,21 +26,18 @@ export function SanMessageCard({
         description={description}
       />
     </Card>
+  ) : (
+    <Card>
+      <Row justify="space-between">
+        <Col>
+          <Meta title={title} description={description} />
+        </Col>
+        <Col>
+          <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
+        </Col>
+      </Row>
+    </Card>
   );
 }
 
 export default SanMessageCard;
-
-{/* <Card>
-  <Row justify="space-between">
-    <Col>
-      <Meta
-        title={title}
-        description={description}
-      />
-    </Col>
-    <Col>
-      <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
-    </Col>
-  </Row>
-</Card> */}

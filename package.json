@@ -12,9 +12,12 @@
     "next": "14.0.4",
     "numeral": "^2.0.6",
     "numeral-nudge": "^1.0.0",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.73.2",
+    "sequelize": "^6.37.3",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
     "tslib": "^2.3.0"

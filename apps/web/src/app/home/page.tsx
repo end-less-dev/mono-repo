@@ -1,7 +1,7 @@
-
+import { Conversation } from "@san/conversation"
 const Home = ()=>{
     return (
-        <h2>hello</h2>
+        <Conversation/>
     )
 }
 

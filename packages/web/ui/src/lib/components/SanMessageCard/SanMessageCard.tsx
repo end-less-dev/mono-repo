@@ -17,7 +17,7 @@ export function SanMessageCard({
   currentUser,
 }: SanMessageCardProps) {
   return (
-    <Card style={currentUser ? {backgroundColor : "lightblue"} : {backgroundColor:"transparent"}}>
+    <Card style={currentUser ? {backgroundColor : "lightblue"} : {backgroundColor:"#E2E4E8"}}>
       <Meta
         avatar={
           <Avatar src={avatar} />

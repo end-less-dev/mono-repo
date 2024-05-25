@@ -1,64 +1,29 @@
-// server.js
-const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
-
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 8080;
+import express from 'express';
+import http from 'http';
+import { Server } from 'socket.io';
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"]
+  }
+});
 
-io.on('connection', (socket : any) => {
+io.on('connection', (socket) => {
   console.log('a user connected');
   
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
 
-  socket.on('chat message', (msg : string) => {  
+  socket.on('chat message', (msg) => {
     console.log('message: ' + msg);
     io.emit('chat message', msg);
   });
 });
 
-server.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
+server.listen(8080, () => {
+  console.log('listening on *:8080');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import express from 'express';
-
-// const host = process.env.HOST ?? 'localhost';
-// const port = process.env.PORT ? Number(process.env.PORT) : 8080;
-
-// const app = express();
-
-// app.get('/', (req, res) => {
-//   res.send({ message: 'Hello API' });
-// });
-
-// app.listen(port, host, () => {
-//   console.log(`[ ready ] http://${host}:${port}`);
-// });
